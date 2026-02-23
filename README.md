@@ -3,22 +3,29 @@
 Reflection
 
 Briefly summarize your client, Artemis Financial, and its software requirements. Who was the client? What issue did the company want you to address?
+
 Artemis Financial is a financial consulting company focused on delivering individualized financial planning services, including savings, retirement, investment, and insurance strategies. The organization’s primary concern centered on modernizing its RESTful web based application while strengthening software security. Due to the sensitive nature of financial and customer data processed by the system, Artemis Financial required improved protection of data in transit, secure API interactions, and mitigation of vulnerabilities associated with outdated dependencies and insecure coding practices. The objective of this assessment was to identify weaknesses that could expose the application to unauthorized access, data breaches, or exploitation.
 
 What did you do well when you found your client’s software security vulnerabilities? Why is it important to code securely? What value does software security add to a company’s overall well-being?
+
 I performed a thorough vulnerability assessment using both manual review and static testing techniques. The manual inspection allowed identification of insecure coding patterns, including hard coded credentials, missing input validation, weak encapsulation, and unsafe database interactions. Static testing using dependency check tools revealed multiple third party libraries with known CVEs, including several classified as high and critical severity. Coding securely is essential because vulnerabilities often originate from small oversights that can lead to data compromise, system instability, or reputational damage. Strong software security enhances a company’s operational stability, protects sensitive information, preserves customer trust, and reduces financial risk associated with breaches or downtime.
 
 Which part of the vulnerability assessment was challenging or helpful to you?
+
 The most challenging aspect involved interpreting static testing results and distinguishing meaningful vulnerabilities from lower risk findings. Dependency reports often contain numerous CVE entries, requiring careful evaluation of severity, exploitability, and relevance to the application’s actual usage. The most helpful component was the manual code review process, as it strengthened my ability to recognize insecure coding practices and understand how design decisions directly influence security posture.
 
 How did you increase layers of security? In the future, what would you use to assess vulnerabilities and decide which mitigation techniques to use?
+
 Security layers were strengthened by recommending dependency upgrades, enforcing secure input validation, removing hard coded credentials, applying least privilege access, and improving error handling. Additional recommendations included secure deserialization configurations and framework hardening practices. In future projects, I would continue using automated vulnerability scanning tools, static analysis, secure code reviews, and established security frameworks such as OWASP guidelines. Severity ratings, exploit history, and business impact analysis would guide mitigation prioritization.
 
 How did you make certain the code and software application were functional and secure? After refactoring the code, how did you check to see whether you introduced new vulnerabilities?
+
 Functionality and stability were validated through unit testing and regression testing. After refactoring, I re-executed JUnit test suites to ensure existing behaviors remained intact and that validation rules continued to function correctly. I also reran static testing tools to confirm that dependency-related vulnerabilities were reduced and that no new security warnings were introduced. This combination of regression testing and vulnerability scanning helped maintain both correctness and security assurance.
 
 What resources, tools, or coding practices did you use that might be helpful in future assignments or tasks?
+
 This project reinforced the value of JUnit testing, OWASP dependency check tools, secure coding principles, defensive programming techniques, and validation driven design. Separating validation logic into model classes and operational logic into service layers improved clarity and reduced redundancy. These practices are broadly applicable to professional development environments and support long term maintainability.
 
 Employers sometimes ask for examples of work that you have successfully completed to show your skills, knowledge, and experience. What might you show future employers from this assignment?
+
 This assignment provides a strong example of practical security analysis, structured testing methodology, vulnerability identification, and mitigation planning. Artifacts such as the vulnerability assessment report, unit test design, dependency analysis results, and refactored code demonstrate competencies in secure software development, risk evaluation, and quality assurance practices.
